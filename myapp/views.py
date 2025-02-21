@@ -29,7 +29,14 @@ class homepage(View):
     
 class eventregistration(View):
     def get(self,request):
-        return render(request,'administrator/eventregistration.html') 
+        c= teacherModel.objects.all()
+        return render(request,'administrator/eventregistration.html', {'teachers':c}) 
+    def post(self,request):
+        c=EventModelForm(request.POST,request.FILES)
+        if c.is_valid():
+            print(c)
+            c.save()
+            return HttpResponse('''<script>alert('event added successfully');window.location='/viewevent'</script>''')
     
 
 class dashboard(View):
@@ -38,18 +45,29 @@ class dashboard(View):
 class manageevent(View):
     def get(self,request):
         return render(request,'administrator/manageevent.html')
-    def post(self,request):
-        c=EventModelForm(request.POST,request.FILES)
-        if c.is_valid():
-            print(c)
-            c.save()
-            return HttpResponse('''<script>alert('event added successfully');window.location='/viewevent'</script>''')
+    
 class viewevent(View):
     def get(self,request):
         return render(request,'administrator/viewevent.html',)
 class editevent(View):
     def get(self,request):
-        return render(request,'administrator/editevent.html')        
+        return render(request,'administrator/editevent.html')
+class deleteevent(View):
+    def get(self,request,id):
+        c=EventModel.objects.get(id=id)
+        c.delete()
+        return HttpResponse('''<script>alert('department deleted successfully');window.location='/viewevent'</script>''')
+class editdepartment(View):
+    def get(self,request,id):
+        c=DepartmentModel.objects.get(id=id)
+        return render(request,'administrator/editdepartment.html',{'data':c})
+    def post(self,request,id):
+        obj=DepartmentModel.objects.get(id=id)
+        c=Department_form(request.POST,instance=obj)
+        if c.is_valid():
+            c.save()
+            return HttpResponse('''<script>alert('department updated successfully');window.location='/viewdepartment'</script>''')
+                    
 class adddepartments(View):
     def get(self,request):
         return render(request,'administrator/adddepartment.html')

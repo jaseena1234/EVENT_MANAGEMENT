@@ -58,8 +58,13 @@
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
-                <label for="teacherName">Name of the Teacher</label>
-                <input type="text" id="teacherName" name="teacherName" required>
+                <label for="teachername">Name of the Teacher</label>
+                <select id="teachername" name="teachername" required>
+                    <option value="">Select Teacher</option>
+                    {% for i in teachers %}
+                    <option value="{{ i.id }}">{{ i.teachername }}</option>
+                    {% endfor %}
+                </select>
             </div>
             <div class="form-group">
                 <label for="departmentName">Name of the Department</label>

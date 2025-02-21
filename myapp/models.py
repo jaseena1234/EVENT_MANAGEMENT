@@ -16,7 +16,7 @@ class teacherModel(models.Model):
     email = models.EmailField(max_length=100, null=True,blank=True)
     contact = models.IntegerField(null=True,blank=True)
 
-class EventModel(models.Model):
+class EventMode(models.Model):
     Teacher_id = models.ForeignKey(teacherModel, on_delete=models.CASCADE, null = True, blank = True)
     DEPT_ID = models.ForeignKey(DepartmentModel,on_delete=models.CASCADE,null = True,blank =True)
     eventname = models.CharField(max_length=100, null=True,blank=True)

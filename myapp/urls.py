@@ -32,5 +32,6 @@ urlpatterns = [
  path("viewteacher",viewteacher.as_view(),name="viewteacher"),
  path("home",home.as_view(),name='home'),
  path("regestration",regestration.as_view(),name='regestration'),
- path('delete/<int:id>/',delete.as_view(), name='delete'),
+ path("delete/<int:id>/",delete.as_view(), name='delete'),
+ path("deleteevent/<int:id>/",deleteevent.as_view(), name='deleteevent'),
 ]
