@@ -1,0 +1,36 @@
+
+from django.urls import path
+from .views import *
+
+urlpatterns = [
+ path("",Login.as_view(),name="login"),
+ path("homepage",homepage.as_view(),name="homepage"),
+ path("eventregistration",eventregistration.as_view(),name="eventregistration"),
+ path("dashboard",dashboard.as_view(),name="dashboard"),
+ path("manageevent",manageevent.as_view(),name="manageevent"),
+ path("viewevent",viewevent.as_view(),name="viewevent"),
+ path("editevent",editevent.as_view(),name="editevent"),
+ path("managedepartment",adddepartments.as_view(),name="adddepartment"),
+ path("viewdepartment",viewdepartment.as_view(),name="viewdepartment"),
+ path("editdepartment/<int:id>",editdepartment.as_view(),name="editdepartment"),
+ path("eventreport",eventreport.as_view(),name="eventreport"),
+ path("complaint",complaint.as_view(),name="complaint"),
+ path("notification",notification.as_view(),name="notification"),
+ path("varify",varify.as_view(),name="varify"),
+ path("participationresult",participationresult.as_view(),name="participationresult"),
+ path("studeform",studeform.as_view(),name="studeform"),
+ path("teacherreg",teacherreg.as_view(),name="teacherreg"),
+ path("registrationview",registrationview.as_view(),name="registrationview"),
+ path("faculty",faculty.as_view(),name="faculty"),
+ path("complaint",complaint.as_view(),name="complaint"),
+ path("edit",edit.as_view(),name="edit"),
+ path("publishjornal",publishjornal.as_view(),name="publishjornal"),
+ path("rply",rply.as_view(),name="rply"),
+ path("studentacheivement",studentacheivement.as_view(),name="studentacheivement"),
+ path("studentrecord",studentrecord.as_view(),name="studentrecord"),
+ path("viewjournal",viewjournal.as_view(),name="viewjournal"),
+ path("viewteacher",viewteacher.as_view(),name="viewteacher"),
+ path("home",home.as_view(),name='home'),
+ path("regestration",regestration.as_view(),name='regestration'),
+ path('delete/<int:id>/',delete.as_view(), name='delete'),
+]

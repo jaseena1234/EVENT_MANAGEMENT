@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Department</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .add-btn {
+            display: block;
+            width: 200px;
+            margin: 0 auto 20px auto;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .buttons {
+            text-align: center;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+        }
+        .buttons .edit-btn {
+            background-color: #007bff;
+        }
+        .buttons .delete-btn {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>View Department</h1>
+        <button class="add-btn" onclick="location.href='add_department.html'">Add Department</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Department Name</th>
+
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{i.departmentname}}</td>
+                    <td class="buttons">
+        
+                        edit</button>
+                        
+                        
+                        
+                        <a href="/editdepartment/{{i.id}}"onclick="return confirm('are you sure you want to edit')"><button class="btn btn-edit-">Edit</button></a>
+                        <a href ="/delete/{{i.id}}" onclick="return confirm('are you sure you want to delete')"><butto classs="delete-button">Delete</butto>    </butto>>
+                    </td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    
+                <!-- Add more department records as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function editDepartment() {
+            // Add your edit functionality here
+            alert('Edit button clicked');
+        }
+
+        function deleteDepartment() {
+            // Add your delete functionality here
+            alert('Delete button clicked');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+        }
+        .buttons .submit-btn {
+            background-color: #28a745;
+        }
+        .buttons .reset-btn {
+            background-color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Teacher Registration Form</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="teacherName">Name:</label>
+                <input type="text" id="teacherName" name="teachername" required>
+            </div>
+            <div class="form-group">
+                <label for="teacherEmail">Email:</label>
+                <input type="email" id="teacherEmail" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="teacherPhone">contact:</label>
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label>username:</label>
+                <input type="text"  name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="teacherPhone">password:</label>
+                <input type="password" id="contact" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="teacherDepartment">Departmentname:</label>
+                <select id="teachernamet" name="departmentname" required>
+                    <option value="">Select Department</option>
+                    {% for i in data %}
+                    <option value="{{i.id}}">{{i.departmentname}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="submit-btn">Register</button>
+                <button type="reset" class="reset-btn">Clear</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

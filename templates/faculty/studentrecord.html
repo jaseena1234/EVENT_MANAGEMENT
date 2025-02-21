@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .buttons {
+            text-align: center;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+        }
+        .buttons .edit-btn {
+            background-color: #007bff;
+        }
+        .buttons .delete-btn {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Records</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Department</th>
+                    <th>Roll Number</th>
+                    <th>Achievement</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Computer Science</td>
+                    <td>12345</td>
+                    <td>Top Scorer</td>
+                    <td class="buttons">
+                        <button class="edit-btn" onclick="editRecord()">Edit</button>
+                        <button class="delete-btn" onclick="deleteRecord()">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Mathematics</td>
+                    <td>67890</td>
+                    <td>Math Olympiad Winner</td>
+                    <td class="buttons">
+                        <button class="edit-btn" onclick="editRecord()">Edit</button>
+                        <button class="delete-btn" onclick="deleteRecord()">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more student records as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function editRecord() {
+            // Add your edit functionality here
+            alert('Edit button clicked');
+        }
+
+        function deleteRecord() {
+            // Add your delete functionality here
+            alert('Delete button clicked');
+        }
+    </script>
+</body>
+</html>

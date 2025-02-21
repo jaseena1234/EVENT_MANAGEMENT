@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Journal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .journal-details {
+            margin-bottom: 20px;
+        }
+        .journal-details label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .journal-details p {
+            margin: 0 0 15px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .buttons {
+            text-align: center;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+        }
+        .buttons .accept-btn {
+            background-color: #28a745;
+        }
+        .buttons .reject-btn {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Verify Journal</h1>
+        <div class="journal-details">
+            <label for="journalTitle">Journal Title:</label>
+            <p id="journalTitle">AI in Modern Education</p>
+            <label for="authorName">Author Name:</label>
+            <p id="authorName">Dr. John Doe</p>
+            <label for="publicationDate">Publication Date:</label>
+            <p id="publicationDate">2025-01-15</p>
+            <label for="journalAbstract">Abstract:</label>
+            <p id="journalAbstract">This journal explores the impact of artificial intelligence in modern education...</p>
+        </div>
+        <div class="buttons">
+            <button class="accept-btn" onclick="acceptJournal()">Accept</button>
+            <button class="reject-btn" onclick="rejectJournal()">Reject</button>
+        </div>
+    </div>
+
+    <script>
+        function acceptJournal() {
+            // Add your accept functionality here
+            alert('Journal accepted');
+        }
+
+        function rejectJournal() {
+            // Add your reject functionality here
+            alert('Journal rejected');
+        }
+    </script>
+</body>
+</html>

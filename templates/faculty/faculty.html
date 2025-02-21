@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 8px;
+        }
+        h2, h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+        }
+        .buttons .submit-btn {
+            background-color: #28a745;
+        }
+        .buttons .reset-btn {
+            background-color: #ffc107;
+        }
+        .form-group input[type="text"], .form-group input[type="date"], .form-group textarea {
+            background-color: #e9f5ff;
+        }
+        .form-group input[type="text"]:focus, .form-group input[type="date"]:focus, .form-group textarea:focus {
+            background-color: #d0eaff;
+            border-color: #007bff;
+        }
+        .form-group label {
+            color: #007bff;
+        }
+        h2 {
+            color: #007bff;
+        }
+        h3 {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Faculty Registration Form</h2>
+        <form action="/submit" method="post">
+            <h3>Personal Details</h3>
+            <div class="form-group">
+                <label for="facultyName">Faculty Name:</label>
+                <input type="text" id="facultyName" name="facultyName" required>
+            </div>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" required>
+            </div>
+            <div class="form-group">
+                <label for="facultyAchievement">Faculty Achievement:</label>
+                <textarea id="facultyAchievement" name="facultyAchievement" rows="4" required></textarea>
+            </div>
+            <h3>Journal Published</h3>
+            <div class="form-group">
+                <label for="journalName">Journal Name:</label>
+                <input type="text" id="journalName" name="journalName" required>
+            </div>
+            <div class="form-group">
+                <label for="journalYear">Year:</label>
+                <input type="text" id="journalYear" name="journalYear" required>
+            </div>
+            <h3>Workshop/FDP Attended</h3>
+            <div class="form-group">
+                <label for="workshopDate">Date:</label>
+                <input type="date" id="workshopDate" name="workshopDate" required>
+            </div>
+            <div class="form-group">
+                <label for="workshopName">Name of Programme:</label>
+                <input type="text" id="workshopName" name="workshopName" required>
+            </div>
+            <div class="form-group">
+                <label for="workshopVenue">Venue:</label>
+                <input type="text" id="workshopVenue" name="workshopVenue" required>
+            </div>
+            <div class="form-group">
+                <label for="workshopCertificate">Certificate:</label>
+                <input type="text" id="workshopCertificate" name="workshopCertificate" required>
+            </div>
+            <h3>Conference Attended</h3>
+            <div class="form-group">
+                <label for="conferenceName">Name of Conference:</label>
+                <input type="text" id="conferenceName" name="conferenceName" required>
+            </div>
+            <div class="form-group">
+                <label for="conferenceVenue">Venue:</label>
+                <input type="text" id="conferenceVenue" name="conferenceVenue" required>
+            </div>
+            <div class="form-group">
+                <label for="conferenceDate">Date:</label>
+                <input type="date" id="conferenceDate" name="conferenceDate" required>
+            </div>
+            <div class="form-group">
+                <label for="conferenceCertificate">Certificate:</label>
+                <input type="text" id="conferenceCertificate" name="conferenceCertificate" required>
+            </div>
+            <h3>Seminar/Webinar Attended</h3>
+            <div class="form-group">
+                <label for="seminarFacultyName">Name of Faculty:</label>
+                <input type="text" id="seminarFacultyName" name="seminarFacultyName" required>
+            </div>
+            <div class="form-group">
+                <label for="seminarDepartment">Department:</label>
+                <input type="text" id="seminarDepartment" name="seminarDepartment" required>
+            </div>
+            <div class="form-group">
+                <label for="seminarProgrammeName">Name of Programme:</label>
+                <input type="text" id="seminarProgrammeName" name="seminarProgrammeName" required>
+            </div>
+            <div class="form-group">
+                <label for="seminarDate">Date:</label>
+                <input type="date" id="seminarDate" name="seminarDate" required>
+            </div>
+            <div class="form-group">
+                <label for="seminarVenue">Venue:</label>
+                <input type="text" id="seminarVenue" name="seminarVenue" required>
+            </div>
+            <div class="form-group">
+                <label for="seminarCertificate">Certificate:</label>
+                <input type="text" id="seminarCertificate" name="seminarCertificate" required>
+            </div>
+            <h3>Projects Undertaken</h3>
+            <div class="form-group">
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" name="projectName" required>
+            </div>
+            <div class="form-group">
+                <label for="projectDuration">Duration:</label>
+                <input type="text" id="projectDuration" name="projectDuration" required>
+            </div>
+            <div class="form-group">
+                <label for="teamMembers">Team Members:</label>
+                <input type="text" id="teamMembers" name="teamMembers" required>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Clear</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

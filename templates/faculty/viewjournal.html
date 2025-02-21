@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Published Journal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .journal-details {
+            margin-bottom: 20px;
+        }
+        .journal-details label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .journal-details p {
+            margin: 0 0 15px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .buttons {
+            text-align: center;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons .back-btn {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Published Journal Details</h2>
+        <div class="journal-details">
+            <label for="journalName">Journal Name:</label>
+            <p id="journalName">Example Journal Name</p>
+        </div>
+        <div class="journal-details">
+            <label for="publishedDate">Published Date:</label>
+            <p id="publishedDate">2025-02-12</p>
+        </div>
+        <div class="journal-details">
+            <label for="teacherName">Name of Teacher:</label>
+            <p id="teacherName">John Doe</p>
+        </div>
+        <div class="buttons">
+            <button type="button" class="back-btn" onclick="window.history.back()">Back</button>
+        </div>
+    </div>
+</body>
+</html>

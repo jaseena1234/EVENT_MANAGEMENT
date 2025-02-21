@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Event Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .buttons {
+            text-align: center;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons .save-btn {
+            background-color: #28a745;
+            color: #fff;
+        }
+        .buttons .cancel-btn {
+            background-color: #dc3545;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Event Registration</h2>
+        <form>
+            <div class="form-group">
+                <label for="departmentName">Name of the Department</label>
+                <input type="text" id="departmentName" name="departmentName" value="Computer Science" required>
+            </div>
+            <div class="form-group">
+                <label for="eventName">Name of the Event</label>
+                <input type="text" id="eventName" name="eventName" value="AI Workshop" required>
+            </div>
+            <div class="form-group">
+                <label for="eventCategory">Event Category</label>
+                <select id="eventCategory" name="eventCategory" required>
+                    <option value="Workshop" selected>Workshop</option>
+                    <option value="Seminar">Seminar</option>
+                    <option value="Conference">Conference</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="eventDate">Date of the Event</label>
+                <input type="date" id="eventDate" name="eventDate" value="2025-02-15" required>
+            </div>
+            <div class="form-group">
+                <label for="eventTime">Time of the Event</label>
+                <input type="time" id="eventTime" name="eventTime" value="10:00" required>
+            </div>
+            <div class="form-group">
+                <label for="numParticipants">Number of Participants</label>
+                <input type="number" id="numParticipants" name="numParticipants" value="50" required>
+            </div>
+            <div class="form-group">
+                <label for="eventReport">Event Report</label>
+                <textarea id="eventReport" name="eventReport" rows="4" required>The workshop was a great success...</textarea>
+            </div>
+            <div class="form-group">
+                <label for="eventPhotos">Event Photos</label>
+                <input type="file" id="eventPhotos" name="eventPhotos" accept="image/*" multiple>
+            </div>
+            <div class="form-group">
+                <label for="eventPoster">Event Poster</label>
+                <input type="file" id="eventPoster" name="eventPoster" accept="image/*">
+            </div>
+            <div class="buttons">
+                <button type="submit" class="save-btn">Save</button>
+                <button type="button" class="cancel-btn" onclick="window.history.back()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

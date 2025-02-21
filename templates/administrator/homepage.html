@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo h1 {
+            margin: 0;
+        }
+        .header .profile {
+            display: flex;
+            align-items: center;
+        }
+        .header .profile-img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header .logout-btn {
+            background-color: #dc3545;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            background: #001f3f;
+            color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1 1 calc(30% - 20px);
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .card:hover {
+            background: #001233;
+        }
+        .card h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Admin Dashboard</h1>
+        </div>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <span class="username">Admin</span>
+            <button class="logout-btn">Logout</button>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Welcome to the Admin Dashboard</h2>
+        <div class="grid">
+            <div class="card" onclick="location.href='manage_events.html'">
+                <h3>Manage Events</h3>
+            </div>
+            <div class="card" onclick="location.href='manage_department.html'">
+                <h3>Manage Department</h3>
+            </div>
+            <div class="card" onclick="location.href='view_teacher.html'">
+                <h3>View Teacher</h3>
+            </div>
+            <div class="card" onclick="location.href='view_student.html'">
+                <h3>View Student</h3>
+            </div>
+            <div class="card" onclick="location.href='notification.html'">
+                <h3>Notification</h3>
+            </div>
+            <div class="card" onclick="location.href='complaints.html'">
+                <h3>Complaints and Reply</h3>
+            </div>
+            <div class="card" onclick="location.href='verify.html'">
+                <h3>Verify</h3>
+            </div>
+            <div class="card" onclick="location.href='upload_result.html'">
+                <h3>Upload Result</h3>
+            </div>
+            <div class="card" onclick="location.href='upload_report.html'">
+                <h3>Upload Report</h3>
+            </div>
+            <div class="card" onclick="location.href='add_teacher_record.html'">
+                <h3>Add Teacher Record</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

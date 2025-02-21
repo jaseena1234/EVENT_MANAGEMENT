@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event Management Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #001f3f;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo h1 {
+            margin: 0;
+        }
+        .header .logout-btn {
+            background-color: #dc3545;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .main-dashboard {
+            width: 80%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            background: #001f3f;
+            color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            flex: 1 1 calc(33% - 20px);
+            box-sizing: border-box;
+            transition: background 0.3s;
+        }
+        .card:hover {
+            background: #001233;
+        }
+        .card h3 {
+            margin: 0;
+        }
+        .card p {
+            margin: 10px 0 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .buttons a, .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .buttons .add-event-btn {
+            background-color: #28a745;
+        }
+        .buttons .view-events-btn {
+            background-color: #17a2b8;
+        }
+        .buttons .manage-events-btn {
+            background-color: #ffc107;
+        }
+        .buttons .view-department-btn {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>College Event Management</h1>
+        </div>
+        <button class="logout-btn">Logout</button>
+    </header>
+  
+    <div class="main-dashboard">
+        <div class="card">
+            <h3>Upcoming Events</h3>
+            <p>5</p>
+        </div>
+        <div class="card">
+            <h3>Ongoing Events</h3>
+            <p>2</p>
+        </div>
+        <div class="card">
+            <h3>Completed Events</h3>
+            <p>10</p>
+        </div>
+    </div>
+    <div class="buttons">
+        <a href="/eventregistration" class="add-event-btn">Add New Event</a>
+        <button class="view-events-btn">View All Events</button>
+        <button class="manage-events-btn">Manage Events</button>
+        <a href="/managedepartment" class="add-event-btn">Add Department</a>
+        <a href="/viewdepartment" class="view-department-btn">View Department</a>
+    </div>
+</body>
+</html>
